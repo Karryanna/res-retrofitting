@@ -23,7 +23,7 @@ def read_word_vecs(filename):
   else: fileObject = open(filename, 'r')
   
   for line in fileObject:
-    line = line.strip().lower()
+    line = line.strip()
     word = line.split()[0]
     wordVectors[word] = numpy.zeros(len(line.split())-1, dtype=float)
     for index, vecVal in enumerate(line.split()[1:]):
